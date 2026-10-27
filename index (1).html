@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rooted Academy | Preschool in Windhoek, Namibia</title>
+<meta name="description" content="Rooted Academy is a private preschool in Windhoek for children aged 18 months to 5 years. Opening 1 March 2027. Apply for a place now.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: one long page. Navy hero with the arch mark, then white and tint bands that alternate. */
+:root{
+  --bg:#FFFFFF; --band:#F4F5F8; --fg:#14284B; --muted:#4F5C75; --line:#D9DDE7;
+  --navy:#14284B; --red:#C8102E; --gold:#C9A24B; --on-navy:#FFFFFF; --card:#FFFFFF;
+  --hero-bg:#14284B; --hero-fg:#FFFFFF; --hero-red:#E23B45;
+  --f-display:'Outfit','Trebuchet MS',sans-serif; --f-body:'Nunito Sans','Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1930; --band:#13203A; --fg:#EEF1F7; --muted:#AAB4C9; --line:#2A3858; --card:#16243F; --red:#E23B45; --gold:#D8B35E;
+  --hero-bg:#0A1326; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0E1930; --band:#13203A; --fg:#EEF1F7; --muted:#AAB4C9; --line:#2A3858; --card:#16243F; --red:#E23B45; --gold:#D8B35E;
+  --hero-bg:#0A1326; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-0.01em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-display);font-weight:500;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+section{padding-block:72px}
+.band{background:var(--band)}
+h2{font-size:clamp(30px,5vw,44px);margin-top:10px}
+.lead{max-width:60ch;color:var(--muted);margin-top:16px}
+
+/* nav */
+nav{background:var(--hero-bg);color:var(--hero-fg)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand b{font-family:var(--f-display);font-weight:600;font-size:26px;line-height:1;display:block}
+.brand i{font-style:normal;font-family:var(--f-display);font-size:10px;letter-spacing:.5em;color:var(--hero-red);display:block;margin-top:5px}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap;font-weight:600;font-size:15px}
+nav a{text-decoration:none}
+nav ul a:hover{color:var(--gold)}
+
+/* hero */
+.hero{background:var(--hero-bg);color:var(--hero-fg);padding-block:40px 80px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(40px,7vw,76px)}
+.hero h1 span{color:var(--hero-red)}
+.hero p{margin-top:22px;font-size:19px;max-width:46ch;color:#DCE2EF}
+.pill{display:inline-block;margin-top:26px;padding:8px 16px;border-radius:30px;background:var(--gold);color:#14284B;font-family:var(--f-display);font-weight:600;font-size:15px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:14px 26px;border-radius:40px;background:var(--red);color:#fff;font-family:var(--f-display);font-weight:600;font-size:17px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;border:2px solid #fff;color:#fff}
+.mark{display:flex;justify-content:center}
+.mark svg{width:min(100%,320px);height:auto}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:40px}
+.why h3{font-size:22px;margin-bottom:8px}
+.why p{color:var(--muted)}
+.why div{border-top:4px solid var(--red);padding-top:18px}
+.why div:nth-child(2){border-color:var(--navy)}
+.why div:nth-child(3){border-color:var(--gold)}
+:root[data-theme="dark"] .why div:nth-child(2){border-color:var(--fg)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .why div:nth-child(2){border-color:var(--fg)}}
+
+/* classes */
+.classes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.cls{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.cls .age{font-family:var(--f-display);font-weight:600;font-size:44px;line-height:1;color:var(--red)}
+.cls .age small{display:block;font-size:13px;letter-spacing:.2em;color:var(--muted);margin-top:6px;font-weight:500}
+.cls h3{font-size:24px;margin-top:10px}
+.cls p{color:var(--muted);font-size:15.5px}
+.cls .meta{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:14px;font-weight:600}
+
+/* day */
+.day{margin-top:40px;display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.slot{display:grid;grid-template-columns:116px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+.slot time{font-family:var(--f-display);font-weight:600;color:var(--red);font-variant-numeric:tabular-nums}
+.slot span{min-width:0}
+.note{margin-top:22px;color:var(--muted);font-size:15px}
+
+/* fees */
+.fees{margin-top:36px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:420px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line)}
+th{font-family:var(--f-display);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td:last-child,th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+td.fee{font-family:var(--f-display);font-weight:600;font-size:22px}
+
+/* enquire */
+.enq{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:8px}
+form{display:grid;gap:16px}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+textarea{min-height:110px;resize:vertical}
+.contact dl{margin:24px 0 0;display:grid;gap:14px}
+.contact dt{font-family:var(--f-display);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+.contact dd{margin:2px 0 0;font-weight:600}
+.ph{color:var(--muted);font-weight:400}
+.out{display:none;margin-top:6px;padding:16px;border:1.5px dashed var(--gold);border-radius:12px;white-space:pre-wrap;background:var(--card)}
+.out.on{display:block}
+.status{min-height:1.4em;font-size:14px;color:var(--muted)}
+
+.steps{display:grid;gap:10px;margin:28px 0 0;padding-left:1.4em;max-width:60ch}
+.steps li::marker{color:var(--red);font-weight:700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.two>*{min-width:0}
+.fh{font-size:20px;margin-top:10px;padding-top:14px;border-top:1px solid var(--line)}
+.fh:first-child{border:0;padding:0;margin:0}
+label.chk{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+label.chk input{width:auto;margin-top:5px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+footer{background:var(--hero-bg);color:#C9D1E3;padding-block:34px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .mark{order:-1;justify-content:flex-start}.mark svg{width:150px}
+  .why{grid-template-columns:1fr}
+  .classes{grid-template-columns:repeat(2,1fr)}
+  .day{grid-template-columns:1fr}
+  .enq{grid-template-columns:1fr}
+  section{padding-block:56px}
+}
+@media (max-width:520px){.classes{grid-template-columns:1fr}.slot{grid-template-columns:100px 1fr}nav ul{gap:14px;font-size:14px}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="mk" viewBox="0 0 104 114"><path fill-rule="evenodd" d="M8 100V52A44 44 0 0 1 96 52V100ZM30 100V52A22 22 0 0 1 74 52V100Z" style="fill:var(--m-arch)"/><circle cx="52" cy="62" r="11.5" style="fill:var(--m-child)"/><path d="M33 100A19 19 0 0 1 71 100Z" style="fill:var(--m-child)"/><rect x="0" y="104" width="104" height="7" rx="3.5" style="fill:var(--m-ground)"/></symbol>
+</defs></svg>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top" aria-label="Rooted Academy home">
+    <svg width="38" height="42" viewBox="0 0 104 114" aria-hidden="true" style="--m-arch:#fff;--m-child:#E23B45;--m-ground:#C9A24B"><use href="#mk"/></svg>
+    <span><b>Rooted</b><i>ACADEMY</i></span>
+  </a>
+  <ul>
+    <li><a href="#classes">Classes</a></li><li><a href="#day">A day here</a></li><li><a href="#fees">Fees</a></li><li><a href="#apply">Apply</a></li><li><a href="#enquire">Enquire</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:var(--hero-red)">Preschool · Windhoek</div>
+    <h1 style="margin-top:14px">Strong roots for <span>small</span> learners.</h1>
+    <p>A warm, well-taught first school for children from 18 months to 5 years. Qualified teachers, small groups and full days from 07:00 to 17:30.</p>
+    <span class="pill">Opening Monday 1 March 2027</span>
+    <div class="cta-row"><a class="btn" href="#apply">Apply for a place</a><a class="btn ghost" href="#classes">See the classes</a></div>
+  </div>
+  <div class="mark"><svg viewBox="0 0 104 114" role="img" aria-label="Rooted Academy arch mark" style="--m-arch:#fff;--m-child:#E23B45;--m-ground:#C9A24B"><use href="#mk"/></svg></div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="eyebrow">Why Rooted</div>
+  <h2>A small school with room to notice every child.</h2>
+  <div class="why">
+    <div><h3>A qualified teacher in every class</h3><p>Four age groups, each with its own teacher and an assistant to help. Children are known by name from the first day.</p></div>
+    <div><h3>Learning through play</h3><p>Stories, songs, counting, art and plenty of time outside. The oldest children build the letters, numbers and habits they need for Grade 1.</p></div>
+    <div><h3>Values at the centre</h3><p>Kindness, honesty, respect and responsibility are part of every day, through stories, prayer and the way our staff treat each child.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="classes"><div class="wrap">
+  <div class="eyebrow">Our classes</div>
+  <h2>Four classes, 58 places.</h2>
+  <p class="lead">Children move up as they grow. Each class has its own room, its own teacher and a routine that fits the age.</p>
+  <div class="classes">
+    <article class="cls"><div class="age">1½–2<small>YEARS</small></div><h3>Nursery</h3><p>Sensory play, first words, songs and movement, with gentle nappy, nap and feeding routines.</p><div class="meta">10 places</div></article>
+    <article class="cls"><div class="age">2–3<small>YEARS</small></div><h3>Toddler</h3><p>Language, counting songs, sorting, pretend play and growing independence.</p><div class="meta">15 places</div></article>
+    <article class="cls"><div class="age">3–4<small>YEARS</small></div><h3>Junior</h3><p>Letters and sounds, early number skills, art, music and sharing with friends.</p><div class="meta">15 places</div></article>
+    <article class="cls"><div class="age">4–5<small>YEARS</small></div><h3>Senior</h3><p>School readiness: phonics, counting to 20, pencil skills, listening and problem solving.</p><div class="meta">18 places</div></article>
+  </div>
+</div></section>
+
+<section id="day"><div class="wrap">
+  <div class="eyebrow">A day at Rooted</div>
+  <h2>A steady rhythm children can trust.</h2>
+  <p class="lead">Every class follows a printed weekly timetable. This is the shape of a typical day.</p>
+  <div class="day">
+    <div>
+      <div class="slot"><time>07:00</time><span>Arrival, hellos and free play</span></div>
+      <div class="slot"><time>08:00</time><span>Morning circle: songs, calendar and a short prayer</span></div>
+      <div class="slot"><time>08:30</time><span>Breakfast and hand washing</span></div>
+      <div class="slot"><time>09:00</time><span>Language and number activities for the class's age</span></div>
+    </div>
+    <div>
+      <div class="slot"><time>10:30</time><span>Outdoor play and movement</span></div>
+      <div class="slot"><time>12:00</time><span>Lunch, then rest or quiet time</span></div>
+      <div class="slot"><time>15:00</time><span>Snack, then art, music, stories and kindness time</span></div>
+      <div class="slot"><time>17:30</time><span>Collection and goodbyes</span></div>
+    </div>
+  </div>
+  <p class="note">Exact times differ by class, and rest time is shaped to each child's needs.</p>
+</div></section>
+
+<section class="band" id="fees"><div class="wrap">
+  <div class="eyebrow">Fees</div>
+  <h2>Clear fees, no surprises.</h2>
+  <div class="fees">
+    <table>
+      <thead><tr><th>Class</th><th>Ages</th><th>Per month</th></tr></thead>
+      <tbody>
+        <tr><td>Nursery</td><td>18 months to 2 years</td><td class="fee">N$2,500</td></tr>
+        <tr><td>Toddler</td><td>2 to 3 years</td><td class="fee">N$2,400</td></tr>
+        <tr><td>Junior</td><td>3 to 4 years</td><td class="fee">N$2,300</td></tr>
+        <tr><td>Senior</td><td>4 to 5 years</td><td class="fee">N$2,200</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Fees are charged for 11 months of the year, with no fee in December. A once-off registration fee of N$800 secures your child's place. The fee schedule is confirmed in writing before you accept a place.</p>
+</div></section>
+
+<section class="band" id="apply"><div class="wrap">
+  <div class="eyebrow">Apply</div>
+  <h2>Apply for a place in 2027.</h2>
+  <p class="lead">Fill in the form, pay the N$800 registration fee, and email your application with the proof of payment to secure your child's spot.</p>
+  <ol class="steps">
+    <li><b>Complete</b> the application form below.</li>
+    <li><b>Pay</b> the N$800 registration fee into the school account.</li>
+    <li><b>Email</b> your application and proof of payment (POP) to <b id="a-mail">the school</b>.</li>
+  </ol>
+  <div class="enq" style="margin-top:36px">
+    <form id="af" novalidate>
+      <h3 class="fh">About your child</h3>
+      <div class="two">
+        <label for="a_cn">Child's full name<input id="a_cn" autocomplete="off"></label>
+        <label for="a_dob">Date of birth<input id="a_dob" type="date"></label>
+      </div>
+      <div class="two">
+        <label for="a_g">Gender<select id="a_g"><option>Girl</option><option>Boy</option></select></label>
+        <label for="a_cl">Class applied for<select id="a_cl"><option>Nursery (18 months to 2 years)</option><option>Toddler (2 to 3 years)</option><option>Junior (3 to 4 years)</option><option>Senior (4 to 5 years)</option></select></label>
+      </div>
+      <label for="a_med">Allergies, medical conditions or special needs<textarea id="a_med" placeholder="Write none if there are none"></textarea></label>
+      <h3 class="fh">Parent or guardian</h3>
+      <div class="two">
+        <label for="a_pn">Full name<input id="a_pn" autocomplete="name"></label>
+        <label for="a_rel">Relationship to child<input id="a_rel" placeholder="Mother, father, guardian"></label>
+      </div>
+      <div class="two">
+        <label for="a_ph">Phone or WhatsApp<input id="a_ph" type="tel" autocomplete="tel"></label>
+        <label for="a_em">Email<input id="a_em" type="email" autocomplete="email"></label>
+      </div>
+      <label for="a_ad">Home address<input id="a_ad" autocomplete="street-address"></label>
+      <label for="a_wk">Occupation and workplace<input id="a_wk"></label>
+      <h3 class="fh">Second parent or guardian (optional)</h3>
+      <div class="two">
+        <label for="a_p2">Full name<input id="a_p2"></label>
+        <label for="a_p2ph">Phone or WhatsApp<input id="a_p2ph" type="tel"></label>
+      </div>
+      <h3 class="fh">Emergency contact</h3>
+      <div class="two">
+        <label for="a_en">Name and relationship<input id="a_en"></label>
+        <label for="a_eph">Phone<input id="a_eph" type="tel"></label>
+      </div>
+      <label for="a_sd">Preferred start date<input id="a_sd" value="Monday 1 March 2027"></label>
+      <label class="chk"><input type="checkbox" id="a_ok"> I confirm that the information is correct and I will pay the N$800 registration fee.</label>
+      <button class="btn" type="submit">Prepare my application</button>
+      <div class="status" id="a-status" role="status"></div>
+      <div class="out" id="a-out"></div>
+      <button class="btn ghost" id="a-copy" type="button" hidden style="color:var(--fg);border-color:var(--fg)">Copy application</button>
+    </form>
+    <div class="contact">
+      <h3 style="font-size:26px">Registration fee: N$800</h3>
+      <p class="lead" style="margin-top:10px">Pay into the school account and use your child's full name as the payment reference.</p>
+      <dl>
+        <div><dt>Account name</dt><dd><span class="ph">[Account name]</span></dd></div>
+        <div><dt>Bank and branch</dt><dd><span class="ph">[Bank, branch and branch code]</span></dd></div>
+        <div><dt>Account number</dt><dd><span class="ph">[Account number]</span></dd></div>
+        <div><dt>Reference</dt><dd>Child's full name</dd></div>
+        <div><dt>Send POP to</dt><dd id="a-mail2">the school email</dd></div>
+      </dl>
+      <p class="note">A place is secured only when the application and the proof of payment have been received and confirmed by the school. The registration fee is a once-off fee for each child.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="enquire"><div class="wrap">
+  <div class="eyebrow">Enquire</div>
+  <h2>Pre-register for 2027.</h2>
+  <p class="lead">Places are limited in every class. Tell us about your child and we will get back to you with a tour and the next steps.</p>
+  <div class="enq" style="margin-top:36px">
+    <form id="f" novalidate>
+      <label for="pname">Your name<input id="pname" autocomplete="name" required></label>
+      <label for="pphone">Phone or WhatsApp<input id="pphone" type="tel" autocomplete="tel"></label>
+      <label for="cage">Your child's age<select id="cage">
+        <option>18 months to 2 years (Nursery)</option><option>2 to 3 years (Toddler)</option><option>3 to 4 years (Junior)</option><option>4 to 5 years (Senior)</option></select></label>
+      <label for="msg">Anything we should know?<textarea id="msg" placeholder="Start month, days needed, questions"></textarea></label>
+      <button class="btn" type="submit">Write my enquiry</button>
+      <div class="status" id="status" role="status"></div>
+      <div class="out" id="out"></div>
+      <button class="btn ghost" id="copy" type="button" hidden style="color:var(--fg);border-color:var(--fg)">Copy enquiry</button>
+    </form>
+    <div class="contact">
+      <h3 style="font-size:26px">Visit or get in touch</h3>
+      <p class="lead" style="margin-top:10px">Send your enquiry to the school by WhatsApp or email, or ask for a tour of the premises.</p>
+      <dl>
+        <div><dt>WhatsApp</dt><dd id="c-wa"><span class="ph">[Phone / WhatsApp number]</span></dd></div>
+        <div><dt>Email</dt><dd id="c-em"><span class="ph">[Email address]</span></dd></div>
+        <div><dt>Address</dt><dd id="c-ad"><span class="ph">[Physical address]</span>, Windhoek, Namibia</dd></div>
+        <div><dt>Hours</dt><dd>Monday to Friday, 07:00 to 17:30</dd></div>
+      </dl>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Rooted Academy · Windhoek, Namibia</span><span>Preschool for ages 18 months to 5 years · Opening 1 March 2027</span></div></footer>
+
+<script>
+// Fill these in when the school has its details; the page then shows them as links.
+var CONFIG={whatsapp:"",email:"rootedaacademy@outlook.com",address:""};
+(function(){
+  function el(i){return document.getElementById(i)}
+  if(CONFIG.whatsapp){var n=CONFIG.whatsapp.replace(/[^0-9]/g,"");el("c-wa").innerHTML='<a href="https://wa.me/'+n+'">'+CONFIG.whatsapp+'</a>'}
+  if(CONFIG.email){el("c-em").innerHTML='<a href="mailto:'+CONFIG.email+'">'+CONFIG.email+'</a>'}
+  if(CONFIG.address){el("c-ad").textContent=CONFIG.address+", Windhoek, Namibia"}
+  var out=el("out"),status=el("status"),copy=el("copy"),text="";
+  el("f").addEventListener("submit",function(e){
+    e.preventDefault();
+    var name=el("pname").value.trim();
+    if(!name){status.textContent="Please add your name so we know who to reply to.";el("pname").focus();return}
+    status.textContent="";
+    text="Hello Rooted Academy,\n\nMy name is "+name+(el("pphone").value.trim()?" ("+el("pphone").value.trim()+")":"")+". I would like to pre-register my child for the "+el("cage").value+" class in 2027."+(el("msg").value.trim()?"\n\n"+el("msg").value.trim():"")+"\n\nThank you.";
+    out.textContent=text;out.className="out on";copy.hidden=false;
+    status.textContent=CONFIG.whatsapp||CONFIG.email?"Copy this message and send it to the school by WhatsApp or email.":"Copy this message. The school's WhatsApp and email will appear here soon.";
+  });
+  copy.addEventListener("click",function(){
+    function fallback(){var r=document.createRange();r.selectNodeContents(out);var s=getSelection();s.removeAllRanges();s.addRange(r);status.textContent="Message selected. Press copy on your device."}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){status.textContent="Copied."},fallback)}else{fallback()}
+  });
+})();
+(function(){
+  function g(i){return document.getElementById(i)}
+  var mail=(typeof CONFIG!=="undefined"&&CONFIG.email)?CONFIG.email:"";
+  if(mail){g("a-mail").textContent=mail;g("a-mail2").textContent=mail}
+  var out=g("a-out"),st=g("a-status"),cp=g("a-copy"),txt="";
+  function v(i){return g(i).value.trim()||"-"}
+  g("af").addEventListener("submit",function(e){
+    e.preventDefault();
+    var need=[["a_cn","your child's name"],["a_dob","your child's date of birth"],["a_pn","the parent's name"],["a_ph","a phone number"],["a_em","an email address"],["a_en","an emergency contact"]];
+    for(var k=0;k<need.length;k++){if(!g(need[k][0]).value.trim()){st.textContent="Please add "+need[k][1]+".";g(need[k][0]).focus();return}}
+    if(!g("a_ok").checked){st.textContent="Please tick the confirmation box.";g("a_ok").focus();return}
+    txt="ROOTED ACADEMY - APPLICATION FOR A PLACE\n\nCHILD\nName: "+v("a_cn")+"\nDate of birth: "+v("a_dob")+"\nGender: "+g("a_g").value+"\nClass: "+g("a_cl").value+"\nAllergies / medical / special needs: "+v("a_med")+"\nPreferred start: "+v("a_sd")+"\n\nPARENT / GUARDIAN\nName: "+v("a_pn")+" ("+v("a_rel")+")\nPhone: "+v("a_ph")+"\nEmail: "+v("a_em")+"\nAddress: "+v("a_ad")+"\nOccupation / workplace: "+v("a_wk")+"\n\nSECOND PARENT / GUARDIAN\nName: "+v("a_p2")+"\nPhone: "+v("a_p2ph")+"\n\nEMERGENCY CONTACT\nName and relationship: "+v("a_en")+"\nPhone: "+v("a_eph")+"\n\nI confirm the information is correct and I will pay the N$800 registration fee. Proof of payment is attached.";
+    out.textContent=txt;out.className="out on";cp.hidden=false;
+    st.textContent="Step 1 done. Copy this application, then email it to "+(mail||"the school")+" together with your proof of payment (POP). Your place is not secured until the school confirms.";
+  });
+  cp.addEventListener("click",function(){
+    function fb(){var r=document.createRange();r.selectNodeContents(out);var s=getSelection();s.removeAllRanges();s.addRange(r);st.textContent="Application selected. Press copy on your device."}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){st.textContent="Copied. Now paste it into an email and attach your POP."},fb)}else{fb()}
+  });
+})();
+</script>
+
+</body>
+</html>
